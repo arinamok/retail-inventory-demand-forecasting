@@ -4,10 +4,39 @@
 Built an end-to-end retail inventory optimization and demand forecasting project using SQL, Python, and Power BI. Analyzed stockout and overstock risks, identified key demand drivers, engineered inventory metrics, and developed a Random Forest forecasting model to support inventory planning and reorder optimization.
 
 ---
+## The Business Problem
+A multi-store retail operation was losing revenue to two opposite problems at the same time: shelves running empty on high-demand products while other products sat unsold. The goal was to understand why, forecast what demand would look like over the next 30 days, and give store managers a clear action list.
+
+### Business Question
+
+> *How can a multi-store retail operation reduce stockouts and overstock situations by accurately forecasting daily product demand and optimizing reorder decisions across stores, categories, and regions?*
+
+### Key Findings:
+- 69% of all store/product combinations are critically low on stock and at risk of running out. Only 6% are in a healthy state. This is a widespread problem, not isolated to one store or category.
+- Clothing runs out the fastest (14.3% stockout rate) while Furniture sits unsold the longest (20.8% overstock rate). It leads to opposite decisions to order more clothing, slow down furniture orders.
+- Promotions increase demand by about 30%. Stores are not accounting for this spike when placing orders, which is likely making the stockout problem worse.
+  
+--- 
 
 ## Dashboard Preview
 
-*Dashboard currently in progress & screenshots will be added after completion (hopefully Friday!).*
+### Page 1: Inventory Health & Risk
+
+<p align="center">
+  <img src="dashboard/Inventory Health & Risk.PNG"
+       width="900"
+       style="border:1px solid #ddd; border-radius:6px;" />
+</p>
+
+<br>
+
+### Page 2: Demand Drivers & Forecasting
+<p align="center">
+  <img src="dashboard/Demand Drivers & Forecasting.PNG"
+       width="900"
+       style="border:1px solid #ddd; border-radius:6px;" />
+</p>
+
 
 ---
 
@@ -20,10 +49,6 @@ The project combines SQL, Python, and Power BI to:
 - identify key demand drivers
 - forecast future product demand
 - optimize reorder decision-making across stores and categories
-
-### Business Question
-
-> *How can a multi-store retail operation reduce stockouts and overstock situations by accurately forecasting daily product demand and optimizing reorder decisions across stores, categories, and regions?*
 
 ---
 
@@ -239,15 +264,10 @@ A Random Forest Regressor was developed to forecast retail demand.
 - Clothing as the highest-demand category
 - Furniture as the lowest-demand category
 
----
-
-## 8. Power BI Dashboard
-
-*(Dashboard screenshots will be added after completion.)*
 
 ---
 
-## 9. Business Recommendations
+## 8. Business Recommendations
 
 | Recommendation | Reason |
 |---|---|
@@ -258,3 +278,27 @@ A Random Forest Regressor was developed to forecast retail demand.
 | Use rolling demand trends for reorder decisions | Strongest forecasting driver |
 
 ---
+
+## Repository Structure
+
+```
+├── sql_queries/
+│   ├── DataCleaning_1.sql
+│   ├── FeatureEngineering_2.sql
+│   └── Analysis_3.sql
+├── notebook/
+│   └── InventoryOptimizationAndDemandForecasting.ipynb
+├── data/
+│   ├── sales_data.csv
+│   ├── sales_data_final.csv
+│   ├── actuals_vs_predicted.csv
+│   ├── forecast_30day.csv
+│   ├── model_metrics.csv
+│   └── risk_table.csv
+├── dashboard/
+│   ├── inventory_analysis_dashboard.pbix
+│   ├── Inventory_Health_Risk.PNG
+│   └── Demand_Drivers_Forecasting.PNG
+└── README.md
+```
+
