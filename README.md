@@ -266,3 +266,13 @@ orders.
 │   └── Demand_Drivers_Forecasting.PNG
 └── README.md
 ```
+
+---
+
+## Tools
+
+- **Languages:** Python (Pandas, NumPy, Scikit-learn, Matplotlib), SQL
+- **Database:** Microsoft SQL Server
+- **Visualization:** Power BI
+- **Concepts:** Inventory analysis, demand forecasting, Random Forest regression, feature engineering, risk classification
+
